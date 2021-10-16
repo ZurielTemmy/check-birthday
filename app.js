@@ -1,29 +1,26 @@
-let btn = document.getElementsByTagName('button')
+let btn = document.querySelector("#btn");
 
 let today = new Date();
 
-function birthdayCheck(){
-    let inputDate = document.getElementsByClassName('date-value').value;
-    let birthDetails = {
-        date:inputDate.getDate(),
-        month:inputDate.getMonth()+1
-        
-    }
-   
-   
-    let currentMonth = today.getMonth()+1;
-    let currentDate = today.getDate();
+function birthdayCheck() {
+  let inputDate = document.querySelector('.date-value').value;
+  const dateObj = new Date(inputDate);
+  let birthDetails = {
+    date: dateObj.getDate(),
+    month: dateObj.getMonth() + 1
+  }
+  console.log(birthDetails)
 
-    if (birthDetails.date == currentDate || birthDetails.month == currentMonth) {
-        alert('Happy Birthday, My Boss')
-    } 
-    else {
-        alert('Not your Birthday yet')
-    }
+  let currentMonth = today.getMonth() + 1;
+  let currentDate = today.getDate();
 
-    for (let i in btn){
-        btn[i].onclick = function(){
-            birthdayCheck();
-        }
-    }
+  let title = document.querySelector('#title').value;
+
+  if (birthDetails.date == currentDate || birthDetails.month == currentMonth) {
+    document.write('Dear ' + title + ', Happy Birthday !')
+  }
+  else {
+    document.write('Not your Birthday yet, ' + title + '')
+  }
 }
+btn.addEventListener("click", birthdayCheck)
