@@ -19,10 +19,10 @@ function birthdayCheck() {
   let title = document.querySelector('#title').value;
 
   if (birthDetails.date != currentDate || birthDetails.month != currentMonth && birthDetails.year != currentYear || birthDetails.year == currentYear) {
-    document.write('Dear ' + title + ', Not your Birthday yet !')
+    alert('Dear ' + title + ', Not your Birthday yet !')
   }
   else {
-    document.write('Dear ' + title + ', Happy Birthday !')
+    alert('Dear ' + title + ', Happy Birthday !')
   }
 }
 btn.addEventListener("click", birthdayCheck)
