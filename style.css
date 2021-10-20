@@ -51,9 +51,15 @@ button {
     border: 1px solid black;
     border-radius: 8px;
     margin-top: 45px;
-    outline: none;
+    /* outline: none; */
     font-family: fantasy;
     font-size: larger;
     color: white;
+    cursor: pointer;
     background: linear-gradient(3800deg, rgb(233, 163, 163), rgb(235, 29, 29));
+}
+#btn:hover {
+   background: white;
+   color: red;
+
 }
