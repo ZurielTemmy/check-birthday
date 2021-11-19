@@ -27,7 +27,7 @@ function birthdayCheck() {
     
   }
   else {
-    text = 'Dear ' + title + ', Happy Birthday !'
+    text = 'Dear ' + title + ', Happy Birthday, Bigger You !'
     display.innerHTML = text;
     display.style.color = 'white'
   }
